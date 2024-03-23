@@ -1,0 +1,142 @@
+html{
+  height: 100vh;
+}
+body {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-between; */
+  font-feature-settings: "liga" 1, "kern" 1,
+
+}
+.top {
+
+  position: sticky;
+  top: 0;
+  padding-block: 0.5rem;
+  z-index: +1;
+}
+
+h1, h2 {
+  transition: font-size 1.9s, 
+              opacity .15s;
+}
+h1 {
+  width: min(100%, 20ch);
+  margin-inline: auto;
+  font-family: "alternate-gothic-condensed-a", sans-serif;
+  font-weight: 800;
+  font-style: normal; 
+  /* font-size: 19vh;   */
+  font-size: 19vmin;
+  line-height: 0.8;
+  padding-top: 0.3;
+  text-align: center; /* Zentrieren Sie den Text horizontal */
+  text-wrap: balance;
+  cursor: pointer;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+h1 > span { display: none }
+h1 > span.visible { display: block }
+
+
+h2 { 
+  position: absolute;
+  inset: auto 0 0;
+  max-height: 100%;
+  overflow-y: auto;
+  /* vertical-align: bottom; */
+  font-family: "century-old-style-std", serif;
+  font-weight: 400;
+  font-style: normal;
+
+  /* font-size: 1vh; */
+  font-size: 0.6vmax;
+  
+  padding-top: 3%;
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-bottom: 1%;
+  line-height: 1.2;
+  text-align: center; /* Zentrieren Sie den Text horizontal */
+  color: black;
+  opacity: 0.3; 
+  cursor: pointer;
+  text-wrap: pretty;
+  user-select: none;
+} 
+
+h2:hover{
+  opacity: 1;
+  transition: 1s;
+}
+
+h2 span[id^="line-"] { display: none;}
+h2 span[id^="line-"].visible { display: inline;}
+
+.starblue {
+  color: #283baf;
+  font-size: 60%;
+  letter-spacing: -0.30em;
+  vertical-align: top; 
+  position: relative; 
+  top: -0.23em;
+}
+
+.starred {
+  color: #e30e2a;
+  font-size: 60%;
+  letter-spacing: -0.30em;
+  vertical-align: top; 
+  position: relative; 
+  top: -0.23em;
+}
+
+.button {
+color: #283baf;
+}
+
+.red {
+  color: #e30e2a;
+}
+
+.blue {
+  color: #283baf;
+}
+
+.italic {
+  font-style: italic
+}
+
+.red-span:hover {
+  color: #e30e2a;
+  cursor: pointer;
+}
+
+.blue-span:hover {
+  color: #283baf;
+  cursor: pointer;
+}
+
+body.zoomed-in h1 {
+  font-size: 1vh;
+  transition:1.9s ;
+  opacity: .3;
+  cursor: pointer;
+
+}
+body.zoomed-in h1:hover {
+  opacity: 1;
+}
+body.zoomed-in h2 {
+  font-size: 3vh;
+  transition:1.9s;
+  cursor: default;
+  opacity: 1;
+}
+
+
